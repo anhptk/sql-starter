@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS favorites;
+DROP TABLE IF EXISTS favorite_movies;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS movies_genres;
@@ -98,7 +98,7 @@ CREATE TABLE users (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE favorites (
+CREATE TABLE favorite_movies (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
     movie_id INT REFERENCES movies(id) ON DELETE CASCADE,
