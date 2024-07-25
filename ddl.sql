@@ -66,6 +66,7 @@ CREATE TABLE movies (
     budget NUMERIC(12, 2), -- max 999,999,999,999.99
     country_id INT REFERENCES countries(id),
     director_id INT REFERENCES people(id),
+    poster_id INT REFERENCES files(id) ON DELETE SET NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
