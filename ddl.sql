@@ -100,9 +100,9 @@ CREATE TABLE users (
 );
 
 CREATE TABLE favorite_movies (
-    id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
     movie_id INT REFERENCES movies(id) ON DELETE CASCADE,
+    PRIMARY KEY (user_id, movie_id),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
