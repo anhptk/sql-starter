@@ -29,7 +29,7 @@ WHERE country_id = 1
     -- Release date is after 2022-01-01
     AND release_date >= '2022-01-01'
     -- Duration is greater than 2hr 15min
-    AND duration > 135
+    AND duration > (2 * 60 + 15)
 
     -- Genre is Action or Drama
     AND EXISTS (

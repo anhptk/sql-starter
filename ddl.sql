@@ -62,7 +62,7 @@ CREATE TABLE movies (
     title VARCHAR(255) NOT NULL,
     release_date DATE,
     description TEXT,
-    duration INT,
+    duration INT, -- in minutes
     budget NUMERIC(12, 2), -- max 999,999,999,999.99
     country_id INT REFERENCES countries(id),
     director_id INT REFERENCES people(id),
